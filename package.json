@@ -20,8 +20,12 @@
   "author": "Igor Antonov",
   "license": "MIT",
   "dependencies": {
+    "class-transformer": "0.5.1",
+    "class-validator": "0.14.2",
     "cross-env": "10.1.0",
-    "express": "5.1.0"
+    "express": "5.1.0",
+    "inversify": "7.10.3",
+    "reflect-metadata": "0.2.2"
   },
   "devDependencies": {
     "@types/express": "5.0.3",
@@ -32,6 +36,7 @@
     "eslint-config-prettier": "10.1.8",
     "nodemon": "3.1.10",
     "ts-node": "10.9.2",
+    "tslib": "2.8.1",
     "typescript": "5.9.3"
   }
 }
