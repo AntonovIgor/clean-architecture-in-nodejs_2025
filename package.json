@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Примеры к докладу «Node.js без Nest.js: практическое руководство по чистой архитектуре",
   "main": "app.js",
+  "type": "module",
   "scripts": {
     "build": "npm run clean && npm run compile",
     "start": "npm run build && node dist/app.js",

@@ -1,0 +1,19 @@
+@host = http://localhost:3000
+@productId = 0ec82181-d986-4ede-8622-b26ff7c3528a
+
+### Создать новый продукт (POST /api/products)
+POST {{host}}/api/products
+Content-Type: application/json
+
+{
+  "name": "Тестовый Продукт",
+  "price": 1000,
+  "currency": "RUB",
+  "stock": 20
+}
+
+### Получить все продукты (GET /api/products)
+GET {{host}}/api/products
+
+### Получить продукт по ID (GET /api/products/:id)
+GET {{host}}/api/products/{{productId}}

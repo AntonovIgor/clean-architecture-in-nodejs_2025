@@ -1,0 +1,21 @@
+@host = http://localhost:3000
+@customerId = '342d9844-4c68-49f3-bf31-12cc9a468cef'
+
+### Создать нового клиента (POST /api/customers)
+POST {{host}}/api/customers
+Content-Type: application/json
+
+{
+  "name": "Тестовый Клиент",
+  "email": "test@example.com"
+}
+
+### Получить всех клиентов (GET /api/customers)
+GET {{host}}/api/customers
+
+### Получить клиента по ID (GET /api/customers/:id)
+GET {{host}}/api/customers/{{customerId}}
+
+### Получить заказы клиента по ID (GET /api/customers/:id/orders)
+# Сначала требуется создать заказ для клиента (см. orders.http)
+GET {{host}}/api/customers/{{customerId}}/orders

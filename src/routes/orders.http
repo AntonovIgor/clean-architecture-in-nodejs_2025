@@ -1,0 +1,45 @@
+@host = http://localhost:3000
+@customerId = 342d9844-4c68-49f3-bf31-12cc9a468cef
+@productId = 0ec82181-d986-4ede-8622-b26ff7c3528a
+@orderId = 3f6fcd5b-b8aa-4df8-9880-1e9c87c9115c
+
+### Создать новый заказ (POST /api/orders)
+POST {{host}}/api/orders
+Content-Type: application/json
+
+{
+  "customerId": "{{customerId}}",
+  "items": [
+    {
+      "productId": "{{productId}}",
+      "quantity": 1
+    }
+  ]
+}
+
+### Получить все заказы (GET /api/orders)
+GET {{host}}/api/orders
+
+### Получить заказ по ID (GET /api/orders/:id)
+GET {{host}}/api/orders/{{orderId}}
+
+### Подтвердить заказ (PATCH /api/orders/:id/confirm)
+# Заказ должен быть в статусе PENDING
+PATCH {{host}}/api/orders/{{orderId}}/confirm
+Content-Type: application/json
+
+{}
+
+### Отправить заказ (PATCH /api/orders/:id/ship)
+# Заказ должен быть в статусе CONFIRMED
+PATCH {{host}}/api/orders/{{orderId}}/ship
+Content-Type: application/json
+
+{}
+
+### Отменить заказ (PATCH /api/orders/:id/cancel)
+# Заказ не должен быть DELIVERED или CANCELLED
+PATCH {{host}}/api/orders/{{orderId}}/cancel
+Content-Type: application/json
+
+{}
