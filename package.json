@@ -1,0 +1,36 @@
+{
+  "name": "clean-architecture-in-nodejs-2025",
+  "version": "1.0.0",
+  "description": "Примеры к докладу «Node.js без Nest.js: практическое руководство по чистой архитектуре",
+  "main": "app.js",
+  "scripts": {
+    "build": "npm run clean && npm run compile",
+    "start": "npm run build && node dist/app.js",
+    "start:dev": "cross-env NODE_ENV=development nodemon",
+    "lint": "eslint src/ --ignore-path .eslintignore --ext .ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rimraf dist",
+    "compile": "tsc -p tsconfig.json",
+    "ts": "tsc --noEmit && node --no-warnings=ExperimentalWarning --loader ts-node/esm"
+  },
+  "keywords": [
+    "clean-architecture"
+  ],
+  "author": "Igor Antonov",
+  "license": "MIT",
+  "dependencies": {
+    "cross-env": "10.1.0",
+    "express": "5.1.0"
+  },
+  "devDependencies": {
+    "@types/express": "5.0.3",
+    "@types/node": "22.18.12",
+    "@typescript-eslint/eslint-plugin": "8.46.2",
+    "@typescript-eslint/parser": "8.46.2",
+    "eslint": "8.57.1",
+    "eslint-config-prettier": "10.1.8",
+    "nodemon": "3.1.10",
+    "ts-node": "10.9.2",
+    "typescript": "5.9.3"
+  }
+}
