@@ -5,7 +5,7 @@
 > Исходники примеров к докладу на митапе Health Samurai  
 > 📅 **Дата выступления:** 23 октября 2025  
 > 🔗 **Лендинг:** [health-samurai.ru/clean-arch](https://health-samurai.ru/clean-arch)  
-> 🍿 **Запись доклада**: в процессе подготовки  
+> 🍿 **Запись доклада**: https://www.youtube.com/watch?v=MjOPgxsJ1Z0  
 > 📚 **Презентация**: См. файл `node-without-nest.pdf` в ветке `chapter_2_good`
 
 ## 📖 О проекте
